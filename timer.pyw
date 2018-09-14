@@ -12,9 +12,9 @@ class Countdown(tk.Frame):
         stopText = StringVar()
         language = StringVar()
         alarm_choose = "Analog"
-        startText.set("Comienzo")
-        stopText.set("Detener")
-        language.set("Español")
+        startText.set("Start")
+        stopText.set("Stop")
+        language.set("English")
         self.create_widgets()
         self.show_widgets()
         self.seconds_left = 0
@@ -50,16 +50,16 @@ class Countdown(tk.Frame):
 
     def switch_language(self):
         global language
-        if language.get() == "Español":
+        if language.get() == "Science":
             language.set("English")
             startText.set("Start")
             self.start.config(bg = "light green")
             stopText.set("Stop")
         else:
-            language.set("Español")
+            language.set("Science")
             self.start.config(bg = "light green")
-            startText.set("Comienzo")
-            stopText.set("Detener")
+            startText.set("E=MC^2")
+            stopText.set("H2SO4")
 
 
     def func(self,value):
@@ -85,8 +85,8 @@ class Countdown(tk.Frame):
         mixer.music.stop()
         self.seconds_left = int(self.entry.get())
         self.stop_timer()
-        if language.get() == "Español":
-            startText.set("Repetir")
+        if language.get() == "Science":
+            startText.set("Velocity")
         else:
             startText.set("Repeat")
         self.countdown()
@@ -95,8 +95,8 @@ class Countdown(tk.Frame):
     def stop_timer(self):
         if self._timer_on:
             self.start.config(bg = "light green")
-            if language.get() == "Español":
-                startText.set("Comienzo")
+            if language.get() == "Science":
+                startText.set("E=MC^2")
             else:
                 startText.set("Start")
             self.after_cancel(self._timer_on)
@@ -110,7 +110,7 @@ class Countdown(tk.Frame):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    root.title("Komocki Timer")
+    root.title("Norton Timer")
     root.resizable(False, False)
     countdown = Countdown(root)
     countdown.pack()

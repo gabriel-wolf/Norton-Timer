@@ -1,6 +1,6 @@
-# Komocki Timer
+# Norton Timer
 
-Timer app made in python for Mr. Komocki's class
+Timer app made in python for Mr. Norton's class
 
 ![v.3.0-1image](https://gitlab.com/gabriel-wolf/KomockiTimer/raw/337af02b049406919f757d9151f78fb09f3c21d1/v.3.0-1.PNG)
 
